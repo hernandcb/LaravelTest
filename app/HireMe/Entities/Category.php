@@ -6,4 +6,8 @@ class Category extends \Eloquent {
 	public function candidates(){
 		return $this->hasMany('HireMe\Entities\Candidate');	
 	}
+	
+	public function getPaginateCandidatesAttribute(){
+		return Candidate::where('category_id', $this->id)->paginate();
+	}
 }

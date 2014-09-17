@@ -13,4 +13,8 @@
 
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@test'] );
 
+// candidates/{slug}/{id}
 Route::get('candidates/{slug}/{id}', ['as' => 'category', 'uses' => 'CandidatesController@category'] );
+
+// hernan-carvajal/1
+Route::get('{slug}/{id}', ['as' => 'candidate', 'uses' => 'CandidatesController@show'] );

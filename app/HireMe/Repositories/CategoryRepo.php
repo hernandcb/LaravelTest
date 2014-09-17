@@ -2,9 +2,9 @@
 
 use HireMe\Entities\Category;
 
-class CategoryRepo {
+class CategoryRepo extends BaseRepo {
 
-	public function find($id){
-		return $category = Category::find($id);
+	public function getModel(){
+		return new Category;
 	}
 }
